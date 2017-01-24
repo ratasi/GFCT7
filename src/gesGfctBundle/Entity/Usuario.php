@@ -67,7 +67,7 @@ class Usuario implements UserInterface
     * @Assert\NotBlank()
     * @Assert\Length(
     *      min = 8,
-    *      max=4096,
+    *      max=100,
     *      minMessage = "Debe tener como minimo 8 caracteres",
     * )
     * @Assert\Regex(
