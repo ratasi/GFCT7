@@ -7,84 +7,183 @@ class __TwigTemplate_f3126462ab78d19046dfcb7f3de7b092aabe0607f2a3060380b156b08e6
     {
         parent::__construct($env);
 
-        // line 2
-        $this->parent = $this->loadTemplate("::base.html.twig", "gesGfctBundle:Default:register.html.twig", 2);
-        $this->blocks = array(
-            'body' => array($this, 'block_body'),
-        );
-    }
+        $this->parent = false;
 
-    protected function doGetParent(array $context)
-    {
-        return "::base.html.twig";
+        $this->blocks = array(
+        );
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_cd57fb86bf5eaee4db3b132f0f81a0f5eecc340a252049aeebac6bf490a88a28 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_cd57fb86bf5eaee4db3b132f0f81a0f5eecc340a252049aeebac6bf490a88a28->enter($__internal_cd57fb86bf5eaee4db3b132f0f81a0f5eecc340a252049aeebac6bf490a88a28_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "gesGfctBundle:Default:register.html.twig"));
+        $__internal_185d18c4bc272e31a64aa90bf57840e2e0606d3d58ba4627b623ac47bb4be05c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_185d18c4bc272e31a64aa90bf57840e2e0606d3d58ba4627b623ac47bb4be05c->enter($__internal_185d18c4bc272e31a64aa90bf57840e2e0606d3d58ba4627b623ac47bb4be05c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "gesGfctBundle:Default:register.html.twig"));
 
-        $this->parent->display($context, array_merge($this->blocks, $blocks));
-        
-        $__internal_cd57fb86bf5eaee4db3b132f0f81a0f5eecc340a252049aeebac6bf490a88a28->leave($__internal_cd57fb86bf5eaee4db3b132f0f81a0f5eecc340a252049aeebac6bf490a88a28_prof);
-
+        // line 1
+        echo "<style type=\"text/css\">
+    #login {
+        padding-top: 50px
     }
+    #login .form-wrap {
+        width: 30%;
+        margin: 0 auto;
+    }
+    #login h1 {
+        color: #F78536;
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+    #login .form-group {
+        margin-bottom: 25px;
+    }
+    #login .checkbox {
+        margin-bottom: 20px;
+        position: relative;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+    #login .checkbox.show:before {
+        content: '\\e013';
+        color: #F78536;
+        font-size: 17px;
+        margin: 1px 0 0 3px;
+        position: absolute;
+        pointer-events: none;
+        font-family: 'Glyphicons Halflings';
+    }
+    #login .checkbox .character-checkbox {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    #login .checkbox .label {
+        color: #6d6d6d;
+        font-size: 13px;
+        font-weight: normal;
+    }
+    #login .btn.btn-custom {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    #login .forget {
+        font-size: 13px;
+        text-align: center;
+        display: block;
+    }
+/*    --------------------------------------------------
+    :: Inputs & Buttons
+    -------------------------------------------------- */
+    .form-control {
+        color: #F78536;
+    }
+    .btn-custom {
+        color: #fff;
+        background-color: #F78536;
+    }
+    .btn-custom:hover,
+    .btn-custom:focus {
+        color: #fff;
+    }
+</style>
 
-    // line 3
-    public function block_body($context, array $blocks = array())
-    {
-        $__internal_1ae277ff377e569ae74969256719a223144f58c66032f94a7cd0ec05e97b113d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1ae277ff377e569ae74969256719a223144f58c66032f94a7cd0ec05e97b113d->enter($__internal_1ae277ff377e569ae74969256719a223144f58c66032f94a7cd0ec05e97b113d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "gesGfctBundle:Default:register.html.twig"));
 
-        // line 4
-        echo "<div class=\"panel panel-default\">
-  <div class=\"panel-heading\">Panel de registro</div>
-     <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 6
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/simple-sidebar.css"), "html", null, true);
-        echo "\">
+<link rel=\"stylesheet\" type=\"text/css\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
 
-
-  <body>
-    <div class=\"contenedor\">
-
-    </div>
 
 ";
-        // line 14
+        // line 80
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
-  ";
-        // line 15
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "username", array()), 'row');
+
+<section id=\"login\">
+    <div class=\"container\">
+        <div class=\"row\">
+            <div class=\"col-xs-12\">
+                <div class=\"form-wrap\">
+                    <h1>Crear una cuenta</h1>
+                    <form>
+                    <div class=\"form-group\">
+                        ";
+        // line 90
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "username", array()), 'errors');
         echo "
-  ";
-        // line 16
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "email", array()), 'row');
+                        ";
+        // line 91
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "username", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Nombre de usuario")));
         echo "
-  ";
-        // line 17
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "plainPassword", array()), "first", array()), 'row');
+                    </div>
+
+                    <div class=\"form-group\">
+                        ";
+        // line 95
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "email", array()), 'errors');
         echo "
-  ";
-        // line 18
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "plainPassword", array()), "second", array()), 'row');
+                        ";
+        // line 96
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "email", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Email")));
         echo "
-  ";
-        // line 19
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "Salvar", array()), 'row');
+                    </div>
+
+                    <div class=\"form-group\">
+                        ";
+        // line 100
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "plainPassword", array()), "first", array()), 'errors');
         echo "
-  ";
-        // line 20
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "Borrar", array()), 'row');
+                        ";
+        // line 101
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "plainPassword", array()), "first", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Contraseña")));
         echo "
-";
-        // line 21
+                    </div>
+
+                    <div class=\"form-group\">
+                        ";
+        // line 105
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "plainPassword", array()), "second", array()), 'errors');
+        echo "
+                        ";
+        // line 106
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "plainPassword", array()), "second", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Confirmar contraseña")));
+        echo "
+                    </div>
+
+                    <div class=\"form-group\">
+                        ";
+        // line 110
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "Salvar", array()), 'widget', array("attr" => array("class" => "btn btn-custom btn-lg btn-block")));
+        echo "
+                    </div>
+
+                    <div class=\"form-group\">
+                        ";
+        // line 114
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "Borrar", array()), 'widget', array("attr" => array("class" => "btn btn-custom btn-lg btn-block")));
+        echo "
+                        </form>
+                    </div>
+
+                    <p><a class=\"forget\" href=\"";
+        // line 118
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("/usuarios/login"), "html", null, true);
+        echo "\">¿Ya te has registrado? Inicia sesión</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    ";
+        // line 123
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 ";
         
-        $__internal_1ae277ff377e569ae74969256719a223144f58c66032f94a7cd0ec05e97b113d->leave($__internal_1ae277ff377e569ae74969256719a223144f58c66032f94a7cd0ec05e97b113d_prof);
+        $__internal_185d18c4bc272e31a64aa90bf57840e2e0606d3d58ba4627b623ac47bb4be05c->leave($__internal_185d18c4bc272e31a64aa90bf57840e2e0606d3d58ba4627b623ac47bb4be05c_prof);
 
     }
 
@@ -100,7 +199,7 @@ class __TwigTemplate_f3126462ab78d19046dfcb7f3de7b092aabe0607f2a3060380b156b08e6
 
     public function getDebugInfo()
     {
-        return array (  83 => 21,  79 => 20,  75 => 19,  71 => 18,  67 => 17,  63 => 16,  59 => 15,  55 => 14,  44 => 6,  40 => 4,  34 => 3,  11 => 2,);
+        return array (  182 => 123,  174 => 118,  167 => 114,  160 => 110,  153 => 106,  149 => 105,  142 => 101,  138 => 100,  131 => 96,  127 => 95,  120 => 91,  116 => 90,  103 => 80,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -113,28 +212,129 @@ class __TwigTemplate_f3126462ab78d19046dfcb7f3de7b092aabe0607f2a3060380b156b08e6
 
     public function getSourceContext()
     {
-        return new Twig_Source("
-{% extends '::base.html.twig' %}
-{% block body %}
-<div class=\"panel panel-default\">
-  <div class=\"panel-heading\">Panel de registro</div>
-     <link rel=\"stylesheet\" type=\"text/css\" href=\"{{asset('css/simple-sidebar.css')}}\">
+        return new Twig_Source("<style type=\"text/css\">
+    #login {
+        padding-top: 50px
+    }
+    #login .form-wrap {
+        width: 30%;
+        margin: 0 auto;
+    }
+    #login h1 {
+        color: #F78536;
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+    #login .form-group {
+        margin-bottom: 25px;
+    }
+    #login .checkbox {
+        margin-bottom: 20px;
+        position: relative;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+    #login .checkbox.show:before {
+        content: '\\e013';
+        color: #F78536;
+        font-size: 17px;
+        margin: 1px 0 0 3px;
+        position: absolute;
+        pointer-events: none;
+        font-family: 'Glyphicons Halflings';
+    }
+    #login .checkbox .character-checkbox {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    #login .checkbox .label {
+        color: #6d6d6d;
+        font-size: 13px;
+        font-weight: normal;
+    }
+    #login .btn.btn-custom {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    #login .forget {
+        font-size: 13px;
+        text-align: center;
+        display: block;
+    }
+/*    --------------------------------------------------
+    :: Inputs & Buttons
+    -------------------------------------------------- */
+    .form-control {
+        color: #F78536;
+    }
+    .btn-custom {
+        color: #fff;
+        background-color: #F78536;
+    }
+    .btn-custom:hover,
+    .btn-custom:focus {
+        color: #fff;
+    }
+</style>
 
 
-  <body>
-    <div class=\"contenedor\">
+<link rel=\"stylesheet\" type=\"text/css\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
 
-    </div>
 
 {{ form_start(form) }}
-  {{ form_row(form.username) }}
-  {{ form_row(form.email) }}
-  {{ form_row(form.plainPassword.first) }}
-  {{ form_row(form.plainPassword.second) }}
-  {{form_row(form.Salvar) }}
-  {{ form_row(form.Borrar) }}
-{{ form_end(form) }}
-{% endblock %}
+
+<section id=\"login\">
+    <div class=\"container\">
+        <div class=\"row\">
+            <div class=\"col-xs-12\">
+                <div class=\"form-wrap\">
+                    <h1>Crear una cuenta</h1>
+                    <form>
+                    <div class=\"form-group\">
+                        {{ form_errors(form.username) }}
+                        {{ form_widget(form.username, {'attr': {'class': 'form-control','placeholder': 'Nombre de usuario'}}) }}
+                    </div>
+
+                    <div class=\"form-group\">
+                        {{ form_errors(form.email) }}
+                        {{ form_widget(form.email, {'attr': {'class': 'form-control','placeholder': 'Email'}}) }}
+                    </div>
+
+                    <div class=\"form-group\">
+                        {{ form_errors(form.plainPassword.first) }}
+                        {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control','placeholder': 'Contraseña'}}) }}
+                    </div>
+
+                    <div class=\"form-group\">
+                        {{ form_errors(form.plainPassword.second) }}
+                        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control','placeholder': 'Confirmar contraseña'}}) }}
+                    </div>
+
+                    <div class=\"form-group\">
+                        {{ form_widget(form.Salvar, {'attr': {'class': 'btn btn-custom btn-lg btn-block'}}) }}
+                    </div>
+
+                    <div class=\"form-group\">
+                        {{ form_widget(form.Borrar, {'attr': {'class': 'btn btn-custom btn-lg btn-block'}}) }}
+                        </form>
+                    </div>
+
+                    <p><a class=\"forget\" href=\"{{asset('/usuarios/login')}}\">¿Ya te has registrado? Inicia sesión</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ form_end(form) }}
 ", "gesGfctBundle:Default:register.html.twig", "C:\\xampp\\symfony\\GFCT\\src\\gesGfctBundle/Resources/views/Default/register.html.twig");
     }
 }

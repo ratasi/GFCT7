@@ -24,9 +24,9 @@ class Usuario implements UserInterface
     private $id;
 
     /**
-     * @var string
-     * @Assert\NotBlank()
-    *  @Assert\Length(
+    * @var string
+    * @ORM\Column(name="username", type="string", length=255, unique=true)
+    * @Assert\Length(
     *      min = 4,
     *      max = 32,
     *      minMessage = "Debe tener como minimo 4 caracteres",
@@ -39,16 +39,18 @@ class Usuario implements UserInterface
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255, unique=true)
+     * @Assert\NotBlank()
+     * @Assert\Email(
+     *    message = " El email '{{ value }}' no es valido",
+     *    checkMX = true
+     *)
      */
     private $email;
 
     /**
     * @var string
-    * @Assert\NotBlank()
-    * @Assert\Email(
-    *     message = "El email '{{ value }}' no es valido.",
-    *     checkMX = true
-    * )
+    * @ORM\Column(name="password", type="string", length=64)
+    * 
     */
     private $password;
 
@@ -68,7 +70,7 @@ class Usuario implements UserInterface
     * @Assert\Length(
     *      min = 8,
     *      max=100,
-    *      minMessage = "Debe tener como minimo 8 caracteres",
+    *      minMessage = "Debe tener como mínimo 8 caracteres",
     * )
     * @Assert\Regex(
     *     pattern="/\d/",
@@ -84,7 +86,7 @@ class Usuario implements UserInterface
     * @Assert\Regex(
     *     pattern     = "/^[A-Z]+.+$/",
     *     htmlPattern = "^[a-zA-Z]+$",
-    *     message="Debe contener alguna letra mayúscula"
+    *     message="Debe contener alguna mayúscula"
     * )
     */
     private $plainPassword;

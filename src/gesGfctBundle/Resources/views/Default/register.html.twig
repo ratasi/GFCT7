@@ -1,22 +1,123 @@
+<style type="text/css">
+    #login {
+        padding-top: 50px
+    }
+    #login .form-wrap {
+        width: 30%;
+        margin: 0 auto;
+    }
+    #login h1 {
+        color: #F78536;
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+    #login .form-group {
+        margin-bottom: 25px;
+    }
+    #login .checkbox {
+        margin-bottom: 20px;
+        position: relative;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+    #login .checkbox.show:before {
+        content: '\e013';
+        color: #F78536;
+        font-size: 17px;
+        margin: 1px 0 0 3px;
+        position: absolute;
+        pointer-events: none;
+        font-family: 'Glyphicons Halflings';
+    }
+    #login .checkbox .character-checkbox {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    #login .checkbox .label {
+        color: #6d6d6d;
+        font-size: 13px;
+        font-weight: normal;
+    }
+    #login .btn.btn-custom {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    #login .forget {
+        font-size: 13px;
+        text-align: center;
+        display: block;
+    }
+/*    --------------------------------------------------
+    :: Inputs & Buttons
+    -------------------------------------------------- */
+    .form-control {
+        color: #F78536;
+    }
+    .btn-custom {
+        color: #fff;
+        background-color: #F78536;
+    }
+    .btn-custom:hover,
+    .btn-custom:focus {
+        color: #fff;
+    }
+</style>
 
-{% extends '::base.html.twig' %}
-{% block body %}
-<div class="panel panel-default">
-  <div class="panel-heading">Panel de registro</div>
-     <link rel="stylesheet" type="text/css" href="{{asset('css/simple-sidebar.css')}}">
 
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-  <body>
-    <div class="contenedor">
-
-    </div>
 
 {{ form_start(form) }}
-  {{ form_row(form.username) }}
-  {{ form_row(form.email) }}
-  {{ form_row(form.plainPassword.first) }}
-  {{ form_row(form.plainPassword.second) }}
-  {{form_row(form.Salvar) }}
-  {{ form_row(form.Borrar) }}
-{{ form_end(form) }}
-{% endblock %}
+
+<section id="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-wrap">
+                    <h1>Crear una cuenta</h1>
+                    <form>
+                    <div class="form-group">
+                        {{ form_errors(form.username) }}
+                        {{ form_widget(form.username, {'attr': {'class': 'form-control','placeholder': 'Nombre de usuario'}}) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_errors(form.email) }}
+                        {{ form_widget(form.email, {'attr': {'class': 'form-control','placeholder': 'Email'}}) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_errors(form.plainPassword.first) }}
+                        {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control','placeholder': 'Contraseña'}}) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_errors(form.plainPassword.second) }}
+                        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control','placeholder': 'Confirmar contraseña'}}) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_widget(form.Salvar, {'attr': {'class': 'btn btn-custom btn-lg btn-block'}}) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_widget(form.Borrar, {'attr': {'class': 'btn btn-custom btn-lg btn-block'}}) }}
+                        </form>
+                    </div>
+
+                    <p><a class="forget" href="{{asset('/usuarios/login')}}">¿Ya te has registrado? Inicia sesión</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ form_end(form) }}

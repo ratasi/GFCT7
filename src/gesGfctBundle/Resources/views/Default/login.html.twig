@@ -1,36 +1,117 @@
-
-{% extends '::base.html.twig' %}
 {% block body %}
-<div class="panel panel-default">
-  <div class="panel-heading">Panel de login </div>
-     <link rel="stylesheet" type="text/css" href="{{asset('css/simple-sidebar.css')}}">
+{% if error %}
+    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+
+<style type="text/css">
+    /*    --------------------------------------------------
+    :: Login Section
+    -------------------------------------------------- */
+#login {
+    padding-top: 50px
+}
+#login .form-wrap {
+    width: 30%;
+    margin: 0 auto;
+}
+#login h1 {
+    color: #F78536;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+#login .form-group {
+    margin-bottom: 25px;
+}
+#login .checkbox {
+    margin-bottom: 20px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+#login .checkbox.show:before {
+    content: '\e013';
+    color: #F78536;
+    font-size: 17px;
+    margin: 1px 0 0 3px;
+    position: absolute;
+    pointer-events: none;
+    font-family: 'Glyphicons Halflings';
+}
+#login .checkbox .character-checkbox {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #F78536;
+    vertical-align: middle;
+    display: inline-block;
+}
+#login .checkbox .label {
+    color: #F78536;
+    font-size: 13px;
+    font-weight: normal;
+}
+#login .btn.btn-custom {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+#login .forget {
+    font-size: 13px;
+    text-align: center;
+    display: block;
+}
+/*    --------------------------------------------------
+    :: Inputs & Buttons
+    -------------------------------------------------- */
+.form-control {
+    color: #F78536;
+}
+.btn-custom {
+    color: white;
+    background-color: #F78536;
+}
+.btn-custom:hover,
+.btn-custom:focus {
+    color: white;
+}
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<form action="{{ path('usuarios') }}" method="post">
+
+    <section id="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-wrap">
+                <h1>Inicia sesión</h1>
+                    <form>
+                        <div class="form-group">
+                            <label for="username" class="sr-only">Nombre de usuario</label>
+                            <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-control" placeholder="Nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="key" class="sr-only">Contraseña</label>
+                            <input type="password" id="contraseña" name="_password" class="form-control" placeholder="Contraseña">
+                        </div>
+                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in">
+                    </form>
+                    <a href="{{asset('/register')}}" class="forget" data-toggle="modal" data-target=".forget-modal">¿No tienes una cuenta? Regístrate</a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-    <body>
-      <div class="contenedor">
 
-      </div>
-
-      {# app/Resources/views/security/login.html.twig #}
-{# ... you will probably extend your base template, like base.html.twig #}
-      {% if error %}
-          <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-      {% endif %}
-
-      <form action="{{ path('usuarios') }}" method="post">
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="_username" value="{{ last_username }}" />
-          <p>
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="_password" /><p>
-
-          {#
-              If you want to control the URL the user
-              is redirected to on success (more details below)
-              <input type="hidden" name="_target_path" value="/account" />
-          #}
-
-          <button type="submit">login</button>
-      </form>
+</form>
 
 {% endblock %}
