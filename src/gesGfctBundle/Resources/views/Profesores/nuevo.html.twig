@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+<div class="panel panel-default">
+  <div class="panel-heading">Panel de creación de profesores</div>
+     <link rel="stylesheet" type="text/css" href="{{asset('css/estilosForm.css')}}">
+
+
+  <body>
+    <div class="contenedor">
+    {{form(formulario)}}
+    </div>
+{% endblock %}

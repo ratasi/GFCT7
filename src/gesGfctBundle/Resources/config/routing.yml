@@ -1,0 +1,56 @@
+ges_gfct_homepage:
+    path:     /index
+    defaults: { _controller: gesGfctBundle:Default:index }
+
+all_empresa:
+    path:     /empresa/all
+    defaults: { _controller: gesGfctBundle:empresa:all }
+
+new_empresa:
+    path:     /empresa/new
+    defaults: { _controller: gesGfctBundle:empresa:newEmpresa }
+
+exito_empresa:
+    path:     /empresa/msgExito
+    defaults: { _controller: gesGfctBundle:empresa:msgExito }
+
+alumno_tabla:
+    path:     /alumno/all
+    defaults: { _controller: gesGfctBundle:alumno:all }
+
+api:
+    path:     /empresa
+    defaults: { _controller: gesGfctBundle:api:empresas }
+    methods: [GET]
+
+profesores:
+    path:     /profesores/all
+    defaults: { _controller: gesGfctBundle:profesores:all }
+
+profesores:nuevo:
+    path:     /profesores/nuevo
+    defaults: { _controller: gesGfctBundle:profesores:nuevo }
+
+api_profesores:
+    path:     /profesores
+    defaults: { _controller: gesGfctBundle:profesores:profes }
+    methods: [GET]
+
+registro:
+    path:     /register
+    defaults: {_controller: gesGfctBundle:Default:register}
+
+admin:
+  path:       /admin
+  defaults:   {_controller:gesGfctBundle:Admin:all}
+
+usuarios:
+  path:       /usuarios/login
+  defaults:   {_controller:gesGfctBundle:Admin:login}
+
+usuario:
+  path:       /usuarios/
+  defaults:   {_controller:gesGfctBundle:Admin:login}
+
+logout:
+    path:     /usuarios/logout

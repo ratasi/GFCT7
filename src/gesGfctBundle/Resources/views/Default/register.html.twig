@@ -1,0 +1,22 @@
+
+{% extends '::base.html.twig' %}
+{% block body %}
+<div class="panel panel-default">
+  <div class="panel-heading">Panel de registro</div>
+     <link rel="stylesheet" type="text/css" href="{{asset('css/simple-sidebar.css')}}">
+
+
+  <body>
+    <div class="contenedor">
+
+    </div>
+
+{{ form_start(form) }}
+  {{ form_row(form.username) }}
+  {{ form_row(form.email) }}
+  {{ form_row(form.plainPassword.first) }}
+  {{ form_row(form.plainPassword.second) }}
+  {{form_row(form.Salvar) }}
+  {{ form_row(form.Borrar) }}
+{{ form_end(form) }}
+{% endblock %}
