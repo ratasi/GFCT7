@@ -49,8 +49,20 @@ usuarios:
   defaults:   {_controller:gesGfctBundle:Admin:login}
 
 usuario:
-  path:       /usuarios/
-  defaults:   {_controller:gesGfctBundle:Admin:login}
+  path:       /usuario/
+  defaults:   {_controller:gesGfctBundle:Admin:usuarios}
 
 logout:
     path:     /usuarios/logout
+
+conf_all:
+    path:     /conf/all
+    defaults: { _controller:gesGfctBundle:conf:all }
+
+conf_new:
+    path:     /conf/new
+    defaults: { _controller:gesGfctBundle:conf:newConf }
+
+exito_configuracion:
+    path:     /conf/msgExito
+    defaults: { _controller:gesGfctBundle:conf:msgExito }

@@ -16,20 +16,20 @@ class __TwigTemplate_8552946f3b346f938fcafcb899fe10494c9dda4cf611ac6094de44804d3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_071bdfe74691f81b7e8eb3b8b2a993d25a05bc91992ca11161cb52dcb869069f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_071bdfe74691f81b7e8eb3b8b2a993d25a05bc91992ca11161cb52dcb869069f->enter($__internal_071bdfe74691f81b7e8eb3b8b2a993d25a05bc91992ca11161cb52dcb869069f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "gesGfctBundle:Default:login.html.twig"));
+        $__internal_5396640fa2cbd32081536bdf60c3ef7c4e03720fc0c8378cbe02f880ffcce811 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5396640fa2cbd32081536bdf60c3ef7c4e03720fc0c8378cbe02f880ffcce811->enter($__internal_5396640fa2cbd32081536bdf60c3ef7c4e03720fc0c8378cbe02f880ffcce811_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "gesGfctBundle:Default:login.html.twig"));
 
         // line 1
         $this->displayBlock('body', $context, $blocks);
         
-        $__internal_071bdfe74691f81b7e8eb3b8b2a993d25a05bc91992ca11161cb52dcb869069f->leave($__internal_071bdfe74691f81b7e8eb3b8b2a993d25a05bc91992ca11161cb52dcb869069f_prof);
+        $__internal_5396640fa2cbd32081536bdf60c3ef7c4e03720fc0c8378cbe02f880ffcce811->leave($__internal_5396640fa2cbd32081536bdf60c3ef7c4e03720fc0c8378cbe02f880ffcce811_prof);
 
     }
 
     public function block_body($context, array $blocks = array())
     {
-        $__internal_87cb0fa0995a7ffb18d11c754d79eed533041c3375f67201cd42c37e00cbbdab = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_87cb0fa0995a7ffb18d11c754d79eed533041c3375f67201cd42c37e00cbbdab->enter($__internal_87cb0fa0995a7ffb18d11c754d79eed533041c3375f67201cd42c37e00cbbdab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "gesGfctBundle:Default:login.html.twig"));
+        $__internal_b2c1e3162375baa9057b802963e879cf98ea6f0fa27cb1f06f76c992df1557b7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b2c1e3162375baa9057b802963e879cf98ea6f0fa27cb1f06f76c992df1557b7->enter($__internal_b2c1e3162375baa9057b802963e879cf98ea6f0fa27cb1f06f76c992df1557b7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "gesGfctBundle:Default:login.html.twig"));
 
         // line 2
         if ((isset($context["error"]) ? $context["error"] : $this->getContext($context, "error"))) {
@@ -119,7 +119,7 @@ class __TwigTemplate_8552946f3b346f938fcafcb899fe10494c9dda4cf611ac6094de44804d3
 }
 
 </style>
-
+<body>
 <link rel=\"stylesheet\" type=\"text/css\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
 <form action=\"";
         // line 86
@@ -160,10 +160,10 @@ class __TwigTemplate_8552946f3b346f938fcafcb899fe10494c9dda4cf611ac6094de44804d3
 
 
 </form>
-
+</body>
 ";
         
-        $__internal_87cb0fa0995a7ffb18d11c754d79eed533041c3375f67201cd42c37e00cbbdab->leave($__internal_87cb0fa0995a7ffb18d11c754d79eed533041c3375f67201cd42c37e00cbbdab_prof);
+        $__internal_b2c1e3162375baa9057b802963e879cf98ea6f0fa27cb1f06f76c992df1557b7->leave($__internal_b2c1e3162375baa9057b802963e879cf98ea6f0fa27cb1f06f76c992df1557b7_prof);
 
     }
 
@@ -270,7 +270,7 @@ class __TwigTemplate_8552946f3b346f938fcafcb899fe10494c9dda4cf611ac6094de44804d3
 }
 
 </style>
-
+<body>
 <link rel=\"stylesheet\" type=\"text/css\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
 <form action=\"{{ path('usuarios') }}\" method=\"post\">
 
@@ -302,7 +302,7 @@ class __TwigTemplate_8552946f3b346f938fcafcb899fe10494c9dda4cf611ac6094de44804d3
 
 
 </form>
-
+</body>
 {% endblock %}
 ", "gesGfctBundle:Default:login.html.twig", "C:\\xampp\\symfony\\GFCT\\src\\gesGfctBundle/Resources/views/Default/login.html.twig");
     }

@@ -16,7 +16,7 @@ class AdminController extends Controller
 
     public function usuariosAction()
     {
-        return $this->render('gesGfctBundle:Default:index.html.twig');
+        return $this->render('gesGfctBundle:Default:usuarios.html.twig');
 
     }
 

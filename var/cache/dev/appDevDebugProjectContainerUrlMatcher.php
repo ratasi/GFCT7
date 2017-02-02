@@ -173,24 +173,42 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'gesGfctBundle\\Controller\\AdminController::allAction',  '_route' => 'admin',);
         }
 
-        if (0 === strpos($pathinfo, '/usuarios')) {
+        if (0 === strpos($pathinfo, '/usuario')) {
             // usuarios
             if ($pathinfo === '/usuarios/login') {
                 return array (  '_controller' => 'gesGfctBundle\\Controller\\AdminController::loginAction',  '_route' => 'usuarios',);
             }
 
             // usuario
-            if (rtrim($pathinfo, '/') === '/usuarios') {
+            if (rtrim($pathinfo, '/') === '/usuario') {
                 if (substr($pathinfo, -1) !== '/') {
                     return $this->redirect($pathinfo.'/', 'usuario');
                 }
 
-                return array (  '_controller' => 'gesGfctBundle\\Controller\\AdminController::loginAction',  '_route' => 'usuario',);
+                return array (  '_controller' => 'gesGfctBundle\\Controller\\AdminController::usuariosAction',  '_route' => 'usuario',);
             }
 
             // logout
             if ($pathinfo === '/usuarios/logout') {
                 return array('_route' => 'logout');
+            }
+
+        }
+
+        if (0 === strpos($pathinfo, '/conf')) {
+            // conf_all
+            if ($pathinfo === '/conf/all') {
+                return array (  '_controller' => 'gesGfctBundle\\Controller\\confController::allAction',  '_route' => 'conf_all',);
+            }
+
+            // conf_new
+            if ($pathinfo === '/conf/new') {
+                return array (  '_controller' => 'gesGfctBundle\\Controller\\confController::newConfAction',  '_route' => 'conf_new',);
+            }
+
+            // exito_configuracion
+            if ($pathinfo === '/conf/msgExito') {
+                return array (  '_controller' => 'gesGfctBundle\\Controller\\confController::msgExitoAction',  '_route' => 'exito_configuracion',);
             }
 
         }

@@ -32,8 +32,8 @@ class Usuario implements UserInterface
     *      minMessage = "Debe tener como minimo 4 caracteres",
     *      maxMessage = "Debe tener como máximo 32 caracteres"
     * )
-     */
-    private $username;
+    */
+      private $username;
 
     /**
      * @var string
@@ -48,12 +48,18 @@ class Usuario implements UserInterface
     private $email;
 
     /**
+      * @var string
+      *
+      * @ORM\Column(name="roles", type="json_array")
+    */
+    private $roles=array();
+
+    /**
     * @var string
     * @ORM\Column(name="password", type="string", length=64)
-    * 
+    *
     */
     private $password;
-
 
     /**
      * Get id
@@ -181,9 +187,23 @@ class Usuario implements UserInterface
       return null;
     }
 
+    /**
+     * Set roles
+     *
+     * @param string $roles
+     *
+     * @return Users
+    */
+    public function setRoles(array $roles)
+    {
+        $this->roles=$roles;
+
+        return $this;
+    }
+
     public function getRoles()
     {
-      return array('ROLE_USER');
+      return $this->roles;
     }
 
     public function eraseCredentials(){
